@@ -19,7 +19,14 @@
     action :create
    end
 
-  git '/etc/repos/apps' do
+ directory '/etc/repos/apps/HelloWorldJSP' do
+    owner 'root'
+    group 'root'
+    mode '0755'
+    action :create
+   end
+
+  git '/etc/repos/apps/HelloWorldJSP' do
     repository 'https://github.com/rcjamessr/HelloWorldJSP.git'
     revision 'master'
     user 'root'
